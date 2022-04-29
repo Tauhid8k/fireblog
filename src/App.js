@@ -8,7 +8,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 
 function App() {
-  const [isAuth, setIsAuth] = useState(false);
+  const [isAuth, setIsAuth] = useState(localStorage.getItem('isAuth'));
   const navigate = useNavigate();
 
   const userSignOut = () => {
