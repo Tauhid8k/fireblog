@@ -16,11 +16,13 @@ const Navbar = ({ isAuth, userSignOut }) => {
               Home
             </Link>
           </li>
-          <li>
-            <Link to='/create' className='flex items-center gap-1'>
-              <BiEdit /> Create
-            </Link>
-          </li>
+          {isAuth && (
+            <li>
+              <Link to='/create' className='flex items-center gap-1'>
+                <BiEdit /> Create
+              </Link>
+            </li>
+          )}
           <li>
             {!isAuth ? (
               <Link to='/login' className='flex items-center gap-1'>
