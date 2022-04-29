@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { BiHome, BiEdit, BiUser, BiLogOutCircle } from 'react-icons/bi';
 
 const Navbar = ({ isAuth, userSignOut }) => {
   return (
@@ -10,20 +11,28 @@ const Navbar = ({ isAuth, userSignOut }) => {
         </div>
         <ul className='menu flex gap-5 font-medium text-gray-700'>
           <li>
-            <Link to='/'>Home</Link>
+            <Link to='/' className='flex items-center gap-1'>
+              <BiHome />
+              Home
+            </Link>
           </li>
           <li>
-            <Link to='/create'>Create</Link>
+            <Link to='/create' className='flex items-center gap-1'>
+              <BiEdit /> Create
+            </Link>
           </li>
           <li>
             {!isAuth ? (
-              <Link to='/login'>Login</Link>
+              <Link to='/login' className='flex items-center gap-1'>
+                <BiUser /> Login
+              </Link>
             ) : (
               <button
                 type='button'
-                className='font-medium text-gray-700'
+                className='font-medium text-gray-700 flex items-center gap-1'
                 onClick={userSignOut}
               >
+                <BiLogOutCircle />
                 Logout
               </button>
             )}
