@@ -45,3 +45,7 @@ body {
   width: 100%;
   max-width: 600px;
 }
+
+.read-more-icon {
+  margin-top: 4.5px;
+}
