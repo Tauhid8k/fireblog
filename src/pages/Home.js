@@ -22,7 +22,6 @@ const Home = ({ isAuth }) => {
       }));
       setPostsList(simplifiedData);
       setIsLoading(false);
-      console.log(simplifiedData);
     };
     getPosts();
   }, []);
@@ -67,7 +66,7 @@ const Home = ({ isAuth }) => {
                 </div>
                 <p className='mb-2'>{limitStr(post.postText)}</p>
                 <Link
-                  to={`/${post.id}`}
+                  to={`/product/${post.id}`}
                   className='flex gap-1 items-center text-lg text-gray-600'
                 >
                   Read More
