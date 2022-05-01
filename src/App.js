@@ -23,7 +23,7 @@ function App() {
       <Navbar isAuth={isAuth} userSignOut={userSignOut} />
       <main className='container'>
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<Home isAuth={isAuth} />} />
           <Route path='/create' element={<CreatePost />} />
           <Route path='/login' element={<Login setIsAuth={setIsAuth} />} />
         </Routes>
