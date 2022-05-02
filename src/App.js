@@ -25,7 +25,7 @@ function App() {
       <main className='container'>
         <Routes>
           <Route path='/' element={<Home isAuth={isAuth} />} />
-          <Route path='/product/:id' element={<SinglePost isAuth={isAuth} />} />
+          <Route path='/posts/:id' element={<SinglePost isAuth={isAuth} />} />
           <Route path='/create' element={<CreatePost />} />
           <Route path='/login' element={<Login setIsAuth={setIsAuth} />} />
         </Routes>

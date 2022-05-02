@@ -66,7 +66,7 @@ const Home = ({ isAuth }) => {
                 </div>
                 <p className='mb-2'>{limitStr(post.postText)}</p>
                 <Link
-                  to={`/product/${post.id}`}
+                  to={`/posts/${post.id}`}
                   className='flex gap-1 items-center text-lg text-gray-600'
                 >
                   Read More
